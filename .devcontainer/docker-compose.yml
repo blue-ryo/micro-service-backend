@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ../:/micro-service-backend/
+    command: /bin/sh -c "while sleep 1000; do :; done"
+    user: vscode

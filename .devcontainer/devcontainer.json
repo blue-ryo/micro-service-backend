@@ -1,0 +1,29 @@
+{
+  "name": "micro service backend",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "devcontainer",
+  "workspaceFolder": "/micro-service-backend",
+  // Configure features
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/bin/python3"
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "streetsidesoftware.code-spell-checker",
+        "charliermarsh.ruff",
+        "tamasfe.even-better-toml",
+        "ms-azuretools.vscode-docker",
+        "formulahendry.code-runner"
+      ]
+    }
+  },
+  "remoteUser": "vscode",
+  "postCreateCommand": "pip3 install -r requirements.txt"
+}
