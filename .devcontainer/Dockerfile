@@ -11,6 +11,7 @@ RUN apt update && \
   curl \
   git \
   wget \
+  openssh-client \
   sudo &&\
 # create user
   groupadd --gid ${useruid} ${username} && \
